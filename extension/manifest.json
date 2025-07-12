@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "CodeChef Buddy",
+    "version": "1.0",
+    "description": "Add and manage your CodeChef friends with detailed information.",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "icons": {
+        "16": "a.png",
+        "48": "a.png",
+        "128": "a.png"
+      },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "a.png"
+    }
+  }
+  
