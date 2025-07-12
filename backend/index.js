@@ -31,6 +31,15 @@ app.get("/profile/:username", async (req, res) => {
     const GlobalRank = parseInt(
       $("ul.inline-list").children().first().children().first().text().trim()
     );
+    const user = {
+      username,
+      name,
+      rating,
+      stars,
+      ContestParticipated,
+      GlobalRank,
+    };
+    console.log(user);
 
     res.json({
       username,
@@ -42,7 +51,7 @@ app.get("/profile/:username", async (req, res) => {
     });
   } catch (error) {
     console.log(error.message);
-    ~res.status(500).json({
+    res.status(500).json({
       error:
         "Failed to fetch CodeChef profile data. Ensure the username is valid.",
     });
